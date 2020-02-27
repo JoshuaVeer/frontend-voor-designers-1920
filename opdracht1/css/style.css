@@ -1,16 +1,139 @@
-html{
-  box-sizing: border-box; /* https://css-tricks.com/box-sizing/ */
-  background:#eee;
-  background: url("../img/flagF4D.png") center no-repeat;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: white;
+    background-color: #241f1f;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+main {
+    margin-top: 80px;
+    width: 100%;
 }
-body{
-  max-width: 30em;
-  margin: 1em auto;
-  padding: 1em;
-  background: #fff;
-  border-radius: 1em;
-  box-shadow: 0.5em 0.5em 0.5em rgba(68,68,68,0.6);
+
+h1 {
+    margin-top: 25px;
+    margin-left: 50px;
+    font-family: monospace;
+    font-size: 4em;
+    color: red;
 }
+
+h2 {
+    font-size: 1.3em;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+img {
+    width: 150px;
+    margin: 0px 10px 0px 15px;
+    transition: 1s;
+}
+
+img:hover {
+    width: 170px;
+    animation: shake 0.5s;
+}
+
+.toggle {
+    display: none;
+    position: absolute;
+    width: 150px;
+    height: 225px;
+    margin-left: 25px;
+}
+
+.toggle:hover {
+    display: block;
+    width: 170px;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(-1deg);
+    }
+
+    20% {
+        transform: rotate(1deg);
+    }
+
+    30% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        transform: rotate(1deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    70% {
+        transform: rotate(-1deg);
+    }
+
+    80% {
+        transform: rotate(1deg);
+    }
+
+    90% {
+        transform: rotate(0deg);
+    }
+}
+
+.dropzone {
+    display: flex;
+    overflow-x: scroll;
+    background-color: #46484a;
+    min-height: 100px;
+    padding: 25px 0 25px 0 ;
+    height: 100%;
+    min-height: 200px;
+    width: 100%;
+}
+
+.dropzone:first-of-type {
+    background-color: #241f1f;
+    height: 250px;
+    width: 100% ;
+}
+
+.dropzone:hover {
+    animation: pulse 2s;
+}
+
+p {
+    text-align: center;
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(126, 129, 135, 0.4);
+    box-shadow: 0 0 0 0 rgba(126, 129, 135, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(126, 129, 135, 0);
+      box-shadow: 0 0 0 10px rgba(126, 129, 135, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(126, 129, 135, 0);
+      box-shadow: 0 0 0 0 rgba(126, 129, 135, 0);
+  }
+}
+
+/* Bron van code:
+Shake animation: https://www.w3schools.com/howto/howto_css_shake_image.asp
+Pulse animation:
+https://codepen.io/igorsheg/pen/MBpwGw
+*/
