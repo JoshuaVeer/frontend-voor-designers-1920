@@ -31,10 +31,6 @@ img {
     transition: 1s;
 }
 
-img: {
-    margin-left: 50px ;
-}
-
 img:hover {
     width: 170px;
     animation: shake 0.5s;
