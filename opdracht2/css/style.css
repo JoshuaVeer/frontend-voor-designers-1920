@@ -1,0 +1,87 @@
+html {
+    scroll-behavior: smooth ;
+}
+
+body {
+    font-family: 'BignoodleTitling' ;
+    margin: 0 ;
+    padding: 0 ;
+    color: #2a2b2a ;
+    overflow-x: hidden ;
+}
+
+section {
+    height: 100vh ;
+}
+
+button {
+    position: relative ;
+    top: 150px ;
+    left: -1200px ;
+    font-family: 'BignoodleTitling' ;
+    font-size: 20em ;
+    border: none ;
+    border-width: 0px ;
+}
+
+.welkomin {
+    left: 100px ;
+    animation: 0.8s linear slideLeft ;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-1300px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(40px);
+    animation-timing-function: ease-out;
+  }
+}
+
+#anykey {
+    position: relative ;
+    top: 300px ;
+    left: 620px ;
+}
+
+a {
+    color: #2a2b2a ;
+    text-decoration: none ;
+    transition: 2s ;
+    padding: 5px ;
+    text-align: left ;
+}
+
+a:hover {
+    border: 2px solid black ;
+    transition: 0.5s ;
+}
+
+p {
+    font-size: 1.2em ;
+}
+
+button:hover {
+    border-top: 2px solid black ;
+    border-bottom: 2px solid black ;
+    transition: 0.5s ;
+}
+
+#ikbenjos p {
+    position: relative ;
+    text-align: center ;
+    top: 150px ;
+}
+
+#naam {
+    font-size: 12em ;
+    text-align: center ;
+    opacity: 0 ;
+}
+
+.halloJos {
+    opacity: 1.0 ;
+    color: blue ;
+}
