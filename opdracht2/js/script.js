@@ -21,7 +21,7 @@ function nextSection() {
 }
 
 function invisibleUit() {
-    mijnNaam.classlist.add(halloJos)
+    mijnNaam.classList.add('halloJos')
     console.log(invisibleUit);
     
 //    if (offsetTop = 1500) {
@@ -44,4 +44,4 @@ function invisibleUit() {
 
 document.addEventListener('click', slideInSide);
 document.addEventListener('keydown', slideInSide);
-document.addeventListener('click', invisibleUit);
+document.addEventListener('click', invisibleUit);
