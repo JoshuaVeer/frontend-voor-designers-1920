@@ -1,6 +1,6 @@
 // Selecteer de header en section uit de HTML file
 const section = document.querySelector('section');
-const article = document.querySelector('article')
+const article = document.querySelector('article');
 
 // De URL van het JSON bestand in een variabele stoppen
 let requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json';
@@ -42,39 +42,18 @@ function showCover(movies) {
         var release = document.createElement('p');
         release.textContent = ('Release: ' + movies[i].release_date);
         article.appendChild(release);
-
-//        var summary = document.createElement('p');
-//        summary.textContent = movies[i].simple_plot;
-//        section2.appendChild(summary);
     }
 }
 
+var articleShow = document.querySelector('article');
 
-//    for (let i = 0; i < heroes.length; i++) {
-//        const myArticle = document.createElement('article');
-//        const myH2 = document.createElement('h2');
-//        const myPara1 = document.createElement('p');
-//        const myPara2 = document.createElement('p');
-//        const myPara3 = document.createElement('p');
-//        const myList = document.createElement('ul');
-//
-//        myH2.textContent = heroes[i].name;
-//        myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-//        myPara2.textContent = 'Age: ' + heroes[i].age;
-//        myPara3.textContent = 'Superpowers:';
-//
-//        const superPowers = heroes[i].powers;
-//        for (let j = 0; j < superPowers.length; j++) {
-//            const listItem = document.createElement('li');
-//            listItem.textContent = superPowers[j];
-//            myList.appendChild(listItem);
-//        }
-//
-//        myArticle.appendChild(myH2);
-//        myArticle.appendChild(myPara1);
-//        myArticle.appendChild(myPara2);
-//        myArticle.appendChild(myPara3);
-//        myArticle.appendChild(myList);
-//
-//        section.appendChild(myArticle);
-//    }
+function showPopup(){
+    articleShow.classlist.toggle('.popup');
+}
+
+articleShow.addEventListener('click', showPopup);
+
+
+
+
+

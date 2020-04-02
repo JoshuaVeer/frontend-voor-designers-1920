@@ -26,6 +26,11 @@ img:hover {
 
 article {
     margin-left: 20px ;
+    visibility: hidden ;
+}
+
+.popup {
+    visibility: visible ;
 }
 
 h2 {
