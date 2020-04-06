@@ -29,7 +29,7 @@ article {
     display: none ;
 }
 
-show {
+article.show {
     display: block ;
 }
 
