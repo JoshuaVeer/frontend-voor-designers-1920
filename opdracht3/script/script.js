@@ -22,14 +22,14 @@ request.onload = function () {
 function showCover(movies) {
 
     for (let i = 0; i < movies.length; i++) {
-        
+
         var article = document.createElement('article');
         section1.appendChild(article);
 
         var cover = document.createElement('img');
         cover.setAttribute("src", movies[i].cover);
         article.appendChild(cover);
-        
+
         var div = document.createElement('div');
         article.appendChild(div);
 
@@ -42,7 +42,7 @@ function showCover(movies) {
         div.appendChild(genre);
 
         var plot = document.createElement('p');
-        plot.textContent = movies[i].plot;
+        plot.textContent = movies[i].simple_plot;
         div.appendChild(plot);
 
         var release = document.createElement('p');
@@ -58,12 +58,13 @@ function showCover(movies) {
     }
 
     afbeelding.addEventListener('click', showDetails);
-    
-    function vergrootImg() {
+
+    function blurImg() {
+        afbeelding.classList.remove('click');
         afbeelding.classList.add('click');
     }
-    
-    afbeelding.addEventListener('click', vergrootImg)
+
+    afbeelding.addEventListener('click', blurImg)
 }
 
 

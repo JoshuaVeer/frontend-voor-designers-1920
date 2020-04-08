@@ -9,12 +9,13 @@ h1 {
     margin: 20px;
 }
 
-section:first-of-type {
+section {
     display: flex;
+    overflow-x: scroll ;
 }
 
 img {
-    width: 200px;
+    width: 300px;
 }
 
 img.click {
@@ -30,12 +31,10 @@ article {
     margin: 20px ;
     top: 450px;
     left: 35px;
-    width: 600px;
-    overflow: hidden;
 }
 
 div {
-    display: none;
+    display: none ;
 }
 
 div.show {
