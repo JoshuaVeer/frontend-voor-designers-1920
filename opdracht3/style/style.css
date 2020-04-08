@@ -18,8 +18,7 @@ img {
 }
 
 img.click {
-    width: 220px;
-    filter: grayscale(80%);
+    filter: blur(1px);
 }
 
 img:hover {
