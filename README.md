@@ -1,4 +1,4 @@
-# Yoink yoink
+# Frontend voor Designers 1920
 
 ![alt text](./img/F4Dsplash.png "Frontend voor Design Splash")
 
