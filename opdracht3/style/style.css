@@ -1,43 +1,53 @@
 body {
-    background-color: #222120 ;
+    background-color: #222120;
 }
 
 h1 {
-    font-family: monospace ;
-    font-size: 4em ;
-    color: red ;
-    margin: 20px ;
+    font-family: monospace;
+    font-size: 4em;
+    color: red;
+    margin: 20px;
 }
 
 section:first-of-type {
-    display: flex ;
+    display: flex;
 }
 
 img {
-    width: 200px ;
-    margin-top: 30px ;
-    margin-left: 30px ;
+    width: 200px;
+}
+
+img.click {
+    width: 220px;
+    filter: grayscale(80%);
 }
 
 img:hover {
     transform: scale(1.05);
-    transition-duration: 0.5s ;   
+    transition-duration: 0.5s ;
 }
 
 article {
-    margin-left: 20px ;
-    display: none ;
+    margin: 20px ;
+    top: 450px;
+    left: 35px;
+    width: 600px;
+    overflow: hidden;
 }
 
-article.show {
-    display: block ;
+div {
+    display: none;
+}
+
+div.show {
+    display: block;
 }
 
 h2 {
-    font-family: sans-serif ;
+    font-family: sans-serif;
 }
 
 p {
-    font-family: sans-serif ;
-    color: white ;
+    font-family: sans-serif;
+    color: white;
 }
