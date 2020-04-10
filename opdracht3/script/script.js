@@ -50,27 +50,32 @@ function showCover(movies) {
         div.appendChild(release);
     }
 
-    const afbeelding = document.querySelector('img');
-
-    function showDetails() {
-        div.classList.toggle('show')
-        console.log(showDetails);
-    }
-
-    afbeelding.addEventListener('click', showDetails);
-
-    function blurImg() {
-        afbeelding.classList.remove('click');
-        afbeelding.classList.add('click');
-    }
-
-    afbeelding.addEventListener('click', blurImg)
+    // Bron code: Nino Schelcher
+    // Voor iedere img wordt een eventlistener en een functie gemaakt. Deze functie roept steeds het element op dat direct na de afbeelding komt, waardoor de bijbehorende div van een film wordt opgeroepen.
+    Array.from(document.getElementsByTagName("img")).forEach(img => img.addEventListener("click", function () {
+        img.nextElementSibling.classList.toggle('show');
+        img.classList.toggle('show');
+    }));
 }
 
+function blurImg() {
+    afbeelding.classList.add('click');
+}
+
+afbeelding.addEventListener('click', blurImg);
 
 
+// Versie 1    
+//    const afbeelding = document.querySelector('img');
+//
+//    function showDetails() {
+//        div.classList.toggle('show')
+//        console.log(showDetails);
+//    }
+//
+//    afbeelding.addEventListener('click', showDetails);
 
-// Versie 1
+// Versie 2
 //    const movieCover = document.querySelector('img');
 
 //    function showArticle() {

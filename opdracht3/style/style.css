@@ -9,17 +9,30 @@ h1 {
     margin: 20px;
 }
 
+header {
+    display: flex ;
+}
+
+header img {
+    width: 50px ;
+    margin-left: 10px ;
+}
+
+.colorfill {
+    filter: invert(99%) sepia(3%) saturate(338%) hue-rotate(171deg) brightness(116%) contrast(100%);
+}
+
 section {
-    display: flex;
-    overflow-x: scroll ;
+    display: flex ;
+    overflow: scroll ;
 }
 
 img {
-    width: 300px;
+    height: 400px;
 }
 
-img.click {
-    filter: blur(1px);
+img.show {
+    border: solid 3px white ;
 }
 
 img:hover {
@@ -29,15 +42,21 @@ img:hover {
 
 article {
     margin: 20px ;
-    top: 450px;
-    left: 35px;
 }
 
 div {
-    display: none ;
+    visibility: hidden ;
+    opacity: 0 ;
+    transition: visibility 0s, opacity 0.3s ease-out;
+    background-color: dimgrey ;
+    border-radius: 0 0 15px 15px ;
+    padding: 5px 15px ;
+    margin-top: 15px ;
 }
 
 div.show {
+    visibility: visible ;
+    opacity: 1 ;
     display: block;
 }
 
