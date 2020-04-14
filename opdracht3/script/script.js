@@ -1,6 +1,5 @@
 // Selecteer de header en section uit de HTML file
 const section1 = document.querySelector('#sec1');
-//const section2 = document.querySelector('#sec2');
 
 // De URL van het JSON bestand in een variabele stoppen
 let requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json';
@@ -21,17 +20,19 @@ request.onload = function () {
 
 function showCover(movies) {
 
-    for (let i = 0; i < movies.length; i++) {
+    var unorderedList = document.createElement('ul');
+    section1.appendChild(unorderedList);
 
-        var article = document.createElement('article');
-        section1.appendChild(article);
+    for (let i = 0; i < movies.length; i++) {
+        var li = document.createElement('li');
+        unorderedList.appendChild(li);
 
         var cover = document.createElement('img');
         cover.setAttribute("src", movies[i].cover);
-        article.appendChild(cover);
+        li.appendChild(cover);
 
         var div = document.createElement('div');
-        article.appendChild(div);
+        li.appendChild(div);
 
         var titel = document.createElement('h2');
         titel.textContent = movies[i].title;
@@ -58,12 +59,55 @@ function showCover(movies) {
     }));
 }
 
-function blurImg() {
-    afbeelding.classList.add('click');
+var slider = document.querySelector('#slider');
+var grid = document.querySelector('#grid');
+
+function gridSwitch() {
+    section1.classList.add('switch');
+    grid.classList.add('active');
+    slider.classList.remove('active');
+    console.log(gridSwitch);
 }
 
-afbeelding.addEventListener('click', blurImg);
+function slideSwitch() {
+    section1.classList.remove('switch');
+    slider.classList.add('active');
+    grid.classList.remove('active');
+}
 
+grid.addEventListener('click', gridSwitch);
+slider.addEventListener('click', slideSwitch);
+
+//var listItem = document.querySelector('li');
+//var liSelected;
+
+//listItem(window).keydown(function(e){
+//    if(e.which === 37){
+//        if(liSelected){
+//            liSelected.removeClass('selected');
+//            next = liSelected.next();
+//            if(next.length > 0){
+//                liSelected = next.addClass('selected');
+//            }else{
+//                liSelected = li.eq(0).addClass('selected');
+//            }
+//        }else{
+//            liSelected = li.eq(0).addClass('selected');
+//        }
+//    }else if(e.which === 39){
+//        if(liSelected){
+//            liSelected.removeClass('selected');
+//            next = liSelected.prev();
+//            if(next.length > 0){
+//                liSelected = next.addClass('selected');
+//            }else{
+//                liSelected = li.last().addClass('selected');
+//            }
+//        }else{
+//            liSelected = li.last().addClass('selected');
+//        }
+//    }
+//});
 
 // Versie 1    
 //    const afbeelding = document.querySelector('img');

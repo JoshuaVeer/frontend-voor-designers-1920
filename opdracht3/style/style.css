@@ -1,70 +1,113 @@
 body {
     background-color: #222120;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 h1 {
     font-family: monospace;
     font-size: 4em;
     color: red;
-    margin: 20px;
+    margin-top: 20px;
+    margin-left: 60px;
 }
 
 header {
-    display: flex ;
-}
-
-header img {
-    width: 50px ;
-    margin-left: 10px ;
+    display: flex;
+    width: 100%;
 }
 
 .colorfill {
+    width: 40px;
+    height: auto;
+    margin-left: 20px;
+    filter: invert(0%) sepia(34%) saturate(0%) hue-rotate(193deg) brightness(86%) contrast(104%);
+}
+
+.colorfill.active {
     filter: invert(99%) sepia(3%) saturate(338%) hue-rotate(171deg) brightness(116%) contrast(100%);
 }
 
-section {
-    display: flex ;
-    overflow: scroll ;
+header img:first-of-type {
+    margin-left: 1000px;
 }
+
+section {
+    width: 95%;
+}
+
+/*
+section.switch {
+    flex-wrap: wrap;
+    width: 800px;
+}
+*/
+
+ul {
+    list-style-type: none;
+    display: flex;
+    overflow-x: scroll;
+}
+
+ul.switch {
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+li {
+    margin-left: 20px;
+}
+
+/*
+li.selected {
+    border: 50px solid yellow;
+}
+*/
 
 img {
     height: 400px;
+    width: 250px;
 }
 
-img.show {
-    border: solid 3px white ;
+section img.show {
+    border: solid 3px white;
 }
 
 img:hover {
     transform: scale(1.05);
-    transition-duration: 0.5s ;
+    transition-duration: 0.5s;
 }
 
 article {
-    margin: 20px ;
+    margin: 20px;
 }
 
 div {
-    visibility: hidden ;
-    opacity: 0 ;
+    visibility: hidden;
+    opacity: 0;
     transition: visibility 0s, opacity 0.3s ease-out;
-    background-color: dimgrey ;
-    border-radius: 0 0 15px 15px ;
-    padding: 5px 15px ;
-    margin-top: 15px ;
+    background-color: dimgrey;
+    border-radius: 0 0 15px 15px;
+    padding: 5px 15px;
+    margin-top: 15px;
+    position: absolute;
+    width: 230px;
 }
 
 div.show {
-    visibility: visible ;
-    opacity: 1 ;
+    visibility: visible;
+    opacity: 1;
     display: block;
 }
 
 h2 {
     font-family: sans-serif;
+    width: 220px;
 }
 
 p {
     font-family: sans-serif;
     color: white;
+    width: 220px;
 }
