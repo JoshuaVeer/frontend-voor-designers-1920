@@ -37,13 +37,6 @@ section {
     width: 95%;
 }
 
-/*
-section.switch {
-    flex-wrap: wrap;
-    width: 800px;
-}
-*/
-
 ul {
     list-style-type: none;
     display: flex;

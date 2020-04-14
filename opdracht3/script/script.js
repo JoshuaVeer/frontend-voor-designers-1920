@@ -21,6 +21,7 @@ request.onload = function () {
 function showCover(movies) {
 
     var unorderedList = document.createElement('ul');
+    unorderedList.setAttribute("id", "filmLijst")
     section1.appendChild(unorderedList);
 
     for (let i = 0; i < movies.length; i++) {
@@ -61,22 +62,24 @@ function showCover(movies) {
 
 var slider = document.querySelector('#slider');
 var grid = document.querySelector('#grid');
+var lijst = document.querySelector('#filmLijst');
 
 function gridSwitch() {
-    section1.classList.add('switch');
     grid.classList.add('active');
     slider.classList.remove('active');
-    console.log(gridSwitch);
+    lijst.classList.add('switch');
 }
 
-function slideSwitch() {
-    section1.classList.remove('switch');
-    slider.classList.add('active');
+function sliderSwitch() {
     grid.classList.remove('active');
+    slider.classList.add('active');
+    lijst.classList.remove('switch');
 }
 
 grid.addEventListener('click', gridSwitch);
-slider.addEventListener('click', slideSwitch);
+slider.addEventListener('click', sliderSwitch);
+
+
 
 //var listItem = document.querySelector('li');
 //var liSelected;
