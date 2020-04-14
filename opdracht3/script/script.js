@@ -1,5 +1,8 @@
 // Selecteer de header en section uit de HTML file
 const section1 = document.querySelector('#sec1');
+var slider = document.querySelector('#slider');
+var grid = document.querySelector('#grid');
+var lijst;
 
 // De URL van het JSON bestand in een variabele stoppen
 let requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json';
@@ -21,10 +24,13 @@ request.onload = function () {
 function showCover(movies) {
 
     var unorderedList = document.createElement('ul');
-    unorderedList.setAttribute("id", "filmLijst")
+    unorderedList.setAttribute('id', 'filmLijst');
     section1.appendChild(unorderedList);
+    
+    lijst = document.querySelector('#filmLijst');
 
     for (let i = 0; i < movies.length; i++) {
+
         var li = document.createElement('li');
         unorderedList.appendChild(li);
 
@@ -60,10 +66,6 @@ function showCover(movies) {
     }));
 }
 
-var slider = document.querySelector('#slider');
-var grid = document.querySelector('#grid');
-var lijst = document.querySelector('#filmLijst');
-
 function gridSwitch() {
     grid.classList.add('active');
     slider.classList.remove('active');
@@ -79,40 +81,38 @@ function sliderSwitch() {
 grid.addEventListener('click', gridSwitch);
 slider.addEventListener('click', sliderSwitch);
 
+function scrollLijst () {
+    if (ArrowLeft === )
+}
 
-
-//var listItem = document.querySelector('li');
-//var liSelected;
-
-//listItem(window).keydown(function(e){
-//    if(e.which === 37){
-//        if(liSelected){
-//            liSelected.removeClass('selected');
-//            next = liSelected.next();
-//            if(next.length > 0){
-//                liSelected = next.addClass('selected');
-//            }else{
-//                liSelected = li.eq(0).addClass('selected');
-//            }
-//        }else{
-//            liSelected = li.eq(0).addClass('selected');
-//        }
-//    }else if(e.which === 39){
-//        if(liSelected){
-//            liSelected.removeClass('selected');
-//            next = liSelected.prev();
-//            if(next.length > 0){
-//                liSelected = next.addClass('selected');
-//            }else{
-//                liSelected = li.last().addClass('selected');
-//            }
-//        }else{
-//            liSelected = li.last().addClass('selected');
-//        }
+//// all list items
+//var listItems = document.querySelectorAll('li');
+//
+//// Looping through the list.
+//var i = 0; i < listItems.length;
+//
+//function right(event) {
+//  if (event.key === 'ArrowRight') {
+//    console.log(i);
+//    // check if the focus is lower than 0 or on -1
+//    if (i <= 0 && i == -1) {
+//      // if that is the case place it on the end of the list
+//      i = listItems.length;
+//      // focus on the item
+//      listItems[i].focus();
+//    } else {
+//      // if not you need to go up
+//      i--;
+//      // set focus on the item
+//      listItems[i].focus();
 //    }
-//});
+//  }
+//}
+//
+//// event on keyup or keydown
+//document.addEventListener('keydown', right, true); 
 
-// Versie 1    
+// Poging 1    
 //    const afbeelding = document.querySelector('img');
 //
 //    function showDetails() {
@@ -122,7 +122,7 @@ slider.addEventListener('click', sliderSwitch);
 //
 //    afbeelding.addEventListener('click', showDetails);
 
-// Versie 2
+// Poging 2
 //    const movieCover = document.querySelector('img');
 
 //    function showArticle() {
@@ -132,7 +132,7 @@ slider.addEventListener('click', sliderSwitch);
 //
 //    movieCover.addEventListener('click', showArticle);
 
-//function showCover(movies) {
+// function showCover(movies) {
 //
 //    for (let i = 0; i < movies.length; i++) {
 //

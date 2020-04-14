@@ -45,18 +45,16 @@ ul {
 
 ul.switch {
     flex-wrap: wrap;
-    width: 800px;
+    width: 1000px;
 }
 
 li {
     margin-left: 20px;
 }
 
-/*
 li.selected {
     border: 50px solid yellow;
 }
-*/
 
 img {
     height: 400px;
