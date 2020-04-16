@@ -47,12 +47,12 @@ request.onload = function () {
 //  }
 //},true)
 
-var loadFunction = function() {
+var loadFunctie = function() {
     loader.classList.add('hallo');
 }
 
 window.onload = function() {
-    setTimeout(loadFunction, 2000);
+    setTimeout(loadFunctie, 2000);
 }
 
 
