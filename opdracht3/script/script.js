@@ -1,10 +1,9 @@
-// Selecteer de header en section uit de HTML file
+// Selecteer elementen uit de HTML file
 var section1 = document.querySelector('#sec1');
 var slider = document.querySelector('#slider');
 var grid = document.querySelector('#grid');
 var lijst;
 var loader = document.querySelector('span');
-//var loader = document.querySelector('span');
 
 // De URL van het JSON bestand in een variabele stoppen
 var requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json';
@@ -23,57 +22,68 @@ request.onload = function () {
     showCover(request.response);
 }
 
+// Het instellen van de tabindex van ALLE li elementen in de code
 let listItems = document.querySelectorAll('li[tabindex="0"]');
 console.log(listItems);
 
-let i = 0; i < listItems.length;
+// Loopen door de lijst aan li elementen
+let i = 0;
+i < listItems.length;
 
+// Eventlistener toevoegen op 'keydown'
 document.addEventListener('keydown', (event) => {
     console.log(event);
-// Get everything when you press a button.
-  let listItems = document.querySelectorAll('li');
+    // Selecteer alle li items
+    let listItems = document.querySelectorAll('li');
 
-  if (event.key === 'ArrowLeft') {
-    // check if the focus is lower than 0 or on -1
-    if (i === -1) {
-      // if that is the case place it on the end of the list
-      i = listItems.length - 1;
-      // focus on the item
-      listItems[i].focus();
-    } else {
-      // if not you need to go up
-      i--;
-      // set focus on the item
-      listItems[i].focus();
+    // Als er op de linkerpijl wordt gedrukt gebeurt er iets
+    if (event.key === 'ArrowLeft') {
+        // Wordt de knop ingedrukt?
+        if (i === -1) {
+            // Zo ja dan begint de selectie in delijst
+            i = listItems.length - 1;
+            // Focus op het item
+            listItems[i].focus();
+        } else {
+            // Zo niet dan gebeurt er niks
+            i--;
+            // Focus op het huidig geselecteerde item
+            listItems[i].focus();
+        }
     }
-  }
-},true);
+}, true);
 
-var loadFunctie = function() {
+// Een variabele aanmaken en direct een functie toewijzen waarin ik een class toevoeg aan het element
+var loadFunctie = function () {
     loader.classList.add('hallo');
 }
 
-window.onload = function() {
+// 2 seconden na het laden van de pagina wordt bovenstaande functie getriggerd
+window.onload = function () {
     setTimeout(loadFunctie, 2000);
 }
 
 console.log(loadFunctie);
 
-
+// Hier creëer ik alle elementen die in de html worden gebruikt
 function showCover(movies) {
-
+    // Een ul aanmaken en deze een ID meegeven
     var unorderedList = document.createElement('ul');
     unorderedList.setAttribute('id', 'filmLijst');
     section1.appendChild(unorderedList);
-    
+    // Hier selecteer ik de hierboven aangemaakte lijst
     lijst = document.querySelector('#filmLijst');
 
+    // Loop door de gegevens in het json bestand
     for (let i = 0; i < movies.length; i++) {
 
+        // Hier volgt een grote lijst waarin ik steeds een element aanmaak en laat verschijnen op de html pagina
         var li = document.createElement('li');
+        // Een waarde toevoegen, in dit geval tabindex 0
         li.setAttribute('tabindex', 0);
         unorderedList.appendChild(li);
 
+        // Hier zeg ik dat hij alle covers uit de json moet halen van iedere film en deze plaatsen in een img element. Dit doe ik ook voor de titels, genres etc.
         var cover = document.createElement('img');
         cover.setAttribute("src", movies[i].cover);
         li.appendChild(cover);
@@ -85,6 +95,7 @@ function showCover(movies) {
         titel.textContent = movies[i].title;
         div.appendChild(titel);
 
+        // Voordat ik de textcontent uit het json bestand haal voeg ik een string toe die ervoor zorgt dat er iets voor het content uit de json komt te staan. In dit geval 'Genre'
         var genre = document.createElement('p');
         genre.textContent = ('Genre: ' + movies[i].genres);
         div.appendChild(genre);
@@ -106,12 +117,14 @@ function showCover(movies) {
     }));
 }
 
+// Een functie waarbij ik classes toevoeg aan de grip knop en de layout. De knop wordt wit (active) en de layout veranderd naar grid. De witte kleur verwijder ik van de sliderknop(inactive).
 function gridSwitch() {
     grid.classList.add('active');
     slider.classList.remove('active');
     lijst.classList.add('switch');
 }
 
+// Hier doe ik hetzelfde, maar dan andersom
 function sliderSwitch() {
     grid.classList.remove('active');
     slider.classList.add('active');
@@ -121,6 +134,9 @@ function sliderSwitch() {
 grid.addEventListener('click', gridSwitch);
 slider.addEventListener('click', sliderSwitch);
 
+// Hier volgen heel wat pogingen met verschillende doeleinden.
+
+// Hier probeerde ik de functie om door te lijst te navigeren te maken.
 //document.addEventListener("keydown", function() {
 //  if (event.keyCode == 39) {
 //    goLeft() {
@@ -158,7 +174,7 @@ slider.addEventListener('click', sliderSwitch);
 //// event on keyup or keydown
 //document.addEventListener('keydown', right, true); 
 
-// Poging 1    
+// Hier volgen mijn eerste pogingen om de info toggle over een film te laten verschijnen en weer verdwijnen   
 //    const afbeelding = document.querySelector('img');
 //
 //    function showDetails() {
