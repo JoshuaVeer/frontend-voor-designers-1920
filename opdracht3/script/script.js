@@ -4,6 +4,7 @@ var slider = document.querySelector('#slider');
 var grid = document.querySelector('#grid');
 var lijst;
 var loader = document.querySelector('span');
+//var loader = document.querySelector('span');
 
 // De URL van het JSON bestand in een variabele stoppen
 var requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json';
@@ -22,30 +23,31 @@ request.onload = function () {
     showCover(request.response);
 }
 
-//let listItems = document.querySelectorAll('li[tabindex="0"]');
-//console.log(listItems);
-//
-//let i = 0; i < listItems.length;
-//
-//document.addEventListener('keydown', (event) => {
-//// Get everything when you press a button.
-//  let listItems = document.querySelectorAll('li');
-//
-//  if (event.key === 'ArrowUp') {
-//    // check if the focus is lower than 0 or on -1
-//    if (i === 0) {
-//      // if that is the case place it on the end of the list
-//      i = listItems.length - 1;
-//      // focus on the item
-//      listItems[i].focus()
-//    } else {
-//      // if not you need to go up
-//      i--;
-//      // set focus on the item
-//      listItems[i].focus();
-//    }
-//  }
-//},true)
+let listItems = document.querySelectorAll('li[tabindex="0"]');
+console.log(listItems);
+
+let i = 0; i < listItems.length;
+
+document.addEventListener('keydown', (event) => {
+    console.log(event);
+// Get everything when you press a button.
+  let listItems = document.querySelectorAll('li');
+
+  if (event.key === 'ArrowLeft') {
+    // check if the focus is lower than 0 or on -1
+    if (i === -1) {
+      // if that is the case place it on the end of the list
+      i = listItems.length - 1;
+      // focus on the item
+      listItems[i].focus();
+    } else {
+      // if not you need to go up
+      i--;
+      // set focus on the item
+      listItems[i].focus();
+    }
+  }
+},true);
 
 var loadFunctie = function() {
     loader.classList.add('hallo');
@@ -54,6 +56,8 @@ var loadFunctie = function() {
 window.onload = function() {
     setTimeout(loadFunctie, 2000);
 }
+
+console.log(loadFunctie);
 
 
 function showCover(movies) {
@@ -67,6 +71,7 @@ function showCover(movies) {
     for (let i = 0; i < movies.length; i++) {
 
         var li = document.createElement('li');
+        li.setAttribute('tabindex', 0);
         unorderedList.appendChild(li);
 
         var cover = document.createElement('img');

@@ -19,12 +19,12 @@ header {
 }
 
 span {
-    z-index: 999 ;
-    background-color: #222120 ;
-    position: absolute ;
-    width: 100% ;
-    height: 100% ;
-    display: block ;
+    z-index: 999;
+    background-color: #222120;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 span.hallo {
@@ -32,18 +32,18 @@ span.hallo {
 }
 
 span p {
-    position: absolute ;
-    top: 60% ;
-    left: 41% ;
-    text-align: center ;
+    position: absolute;
+    top: 60%;
+    left: 41%;
+    text-align: center;
 }
 
 #loader {
-    position: absolute ;
-    top: 40% ;
-    left: 40% ;
-    width: 250px ;
-    height: 140px ;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    height: 140px;
 }
 
 .colorfill {
@@ -80,8 +80,9 @@ li {
     margin-left: 20px;
 }
 
-li.focus {
-    border: 50px solid yellow;
+li:focus {
+    outline: none ;
+    border: 1px solid whitesmoke ;
 }
 
 img {
