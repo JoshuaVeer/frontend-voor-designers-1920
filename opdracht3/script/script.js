@@ -1,14 +1,14 @@
 // Selecteer de header en section uit de HTML file
-const section1 = document.querySelector('#sec1');
+var section1 = document.querySelector('#sec1');
 var slider = document.querySelector('#slider');
 var grid = document.querySelector('#grid');
 var lijst;
 var loader = document.querySelector('span');
 
 // De URL van het JSON bestand in een variabele stoppen
-let requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json';
+var requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json';
 // Een request object aanmaken
-let request = new XMLHttpRequest();
+var request = new XMLHttpRequest();
 
 // De request openen
 request.open('GET', requestURL);
