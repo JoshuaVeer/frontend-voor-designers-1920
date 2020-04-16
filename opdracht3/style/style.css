@@ -18,6 +18,34 @@ header {
     width: 100%;
 }
 
+span {
+    z-index: 999 ;
+    background-color: #222120 ;
+    position: absolute ;
+    width: 100% ;
+    height: 100% ;
+    display: block ;
+}
+
+span.hallo {
+    display: none;
+}
+
+span p {
+    position: absolute ;
+    top: 60% ;
+    left: 41% ;
+    text-align: center ;
+}
+
+#loader {
+    position: absolute ;
+    top: 40% ;
+    left: 40% ;
+    width: 250px ;
+    height: 140px ;
+}
+
 .colorfill {
     width: 40px;
     height: auto;
@@ -52,7 +80,7 @@ li {
     margin-left: 20px;
 }
 
-li.selected {
+li.focus {
     border: 50px solid yellow;
 }
 

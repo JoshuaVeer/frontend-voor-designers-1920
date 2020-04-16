@@ -3,6 +3,7 @@ const section1 = document.querySelector('#sec1');
 var slider = document.querySelector('#slider');
 var grid = document.querySelector('#grid');
 var lijst;
+var loader = document.querySelector('span');
 
 // De URL van het JSON bestand in een variabele stoppen
 let requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json';
@@ -20,6 +21,40 @@ request.onload = function () {
     console.log(request.response);
     showCover(request.response);
 }
+
+//let listItems = document.querySelectorAll('li[tabindex="0"]');
+//console.log(listItems);
+//
+//let i = 0; i < listItems.length;
+//
+//document.addEventListener('keydown', (event) => {
+//// Get everything when you press a button.
+//  let listItems = document.querySelectorAll('li');
+//
+//  if (event.key === 'ArrowUp') {
+//    // check if the focus is lower than 0 or on -1
+//    if (i === 0) {
+//      // if that is the case place it on the end of the list
+//      i = listItems.length - 1;
+//      // focus on the item
+//      listItems[i].focus()
+//    } else {
+//      // if not you need to go up
+//      i--;
+//      // set focus on the item
+//      listItems[i].focus();
+//    }
+//  }
+//},true)
+
+var loadFunction = function() {
+    loader.classList.add('hallo');
+}
+
+window.onload = function() {
+    setTimeout(loadFunction, 2000);
+}
+
 
 function showCover(movies) {
 
