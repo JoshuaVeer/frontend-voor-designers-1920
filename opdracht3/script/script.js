@@ -81,9 +81,15 @@ function sliderSwitch() {
 grid.addEventListener('click', gridSwitch);
 slider.addEventListener('click', sliderSwitch);
 
-function scrollLijst () {
-    if (ArrowLeft === )
-}
+document.addEventListener("keydown", function() {
+  if (event.keyCode == 39) {
+    goLeft() {
+        
+  } else if (event.keyCode == 37) {
+    goRight() {
+        
+  }
+});
 
 //// all list items
 //var listItems = document.querySelectorAll('li');
