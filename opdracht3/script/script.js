@@ -37,7 +37,7 @@ document.addEventListener('keydown', (event) => {
     let listItems = document.querySelectorAll('li');
 
     // Als er op de linkerpijl wordt gedrukt gebeurt er iets
-    if (event.key === 'ArrowLeft') {
+    if (event.key === 'Shift') {
         // Wordt de knop ingedrukt?
         if (i === -1) {
             // Zo ja dan begint de selectie in delijst

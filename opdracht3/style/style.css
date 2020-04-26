@@ -61,6 +61,16 @@ header img:first-of-type {
     margin-left: 1000px;
 }
 
+#tutorial {
+    margin-left: 60px ;
+}
+
+#tutorial2 {
+    position: absolute;
+    left: 590px ;
+    bottom: 90px ;
+}
+
 section {
     width: 95%;
 }
@@ -80,23 +90,19 @@ li {
     margin-left: 20px;
 }
 
-li:focus {
-    outline: none ;
-    border: 1px solid whitesmoke ;
-}
-
 img {
     height: 400px;
     width: 250px;
 }
 
 section img.show {
-    border: solid 3px white;
+    border: solid 3px #171717;
 }
 
 img:hover {
     transform: scale(1.05);
     transition-duration: 0.5s;
+    filter: blur(1px);
 }
 
 article {
@@ -110,8 +116,8 @@ div {
     background-color: dimgrey;
     border-radius: 0 0 15px 15px;
     padding: 5px 15px;
-    margin-top: 15px;
-    position: absolute;
+    margin-top: 35px;
+    position: relative;
     width: 230px;
 }
 

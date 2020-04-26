@@ -13,9 +13,27 @@ Een portfolio met naar binnen slidende elementen(niet goed gelukt): [Opdracht 2:
 
 Nitflex, maar dan met sliders, layouts en Json: [Opdracht 3: Een interactie uitwerken met externe data](opdracht3/)
 
-In de eindopdracht heb ik mijn best gedaan om een eigen versie van Netflix te bouwen met een aantal verschillende functies. In eerste instantie is er de movieslider met daarin verschillende films, opgehaald uit het json bestand. Wanneer je over deze afbeeldingen hovert krijg je visuele feedback dat je focust op een specifieke film. Zodra je deze film selecteert krijgt hij een witter rand om aan te geven dat de film is geselecteerd. Tegelijkertijd klapt er een venster open met informatie over de film.
+Toelichting eindopdracht
+Voor de eindopdracht van frontend voor designers heb ik mijn best gedaan om mijn eigen Netflix op te zetten, genaamd Nitflex. Tijdens de opdracht heb ik de json file van Koop Reynders gebruikt.
 
-Ook kan de layout van Nitflex worden aangepast. Met behulp van de buttons rechtsboven in het scherm kun je de slider met films switchen naar een grid layout. Op deze manier kun je door de films scrollen hoe jij wil.
+Wanneer de gebruiker Nitflex opent komt hij eerst terecht op een loading state. Hier staat een laadsymbool en ontvangt hij een geruststellend bericht dat Nitflex 'op zoek is naar de beste films voor de gebruiker'. Zo weet de gebruiker waarop hij aan het wachten is.
+
+Zodra de gebruiker dan op het homescherm is aangekomen van Nitflex kan het feest beginnen. Hier kan hij in eerste instantie het overzicht van de films in een slider of grid weer laten geven. De keus is hier aan hem. Zo heeft de gebruiker controle over wat hij fijn vind om mee te werken.
+
+De gebruiker kan vervolgens navigeren door het aanbod aan films. Dit kan via de 'tab' knop op het toetsenbord, wat ook vermeld staat boven het overzicht, maar dit kan ook worden gedaan door middel van scrollen. De mogelijkheid tot scrollen wordt weergegeven door de film rechts in het carousel die niet helemaal meer in beeld is. Dit suggereert dat er meer films aanwezig zijn.
+
+Als de gebruiker dan uiteindelijk een film heeft gevonden die hij leuk vind kan hij hier naartoe navigeren en erop klikken. Voordat hij klikt vergroot de cover van de film en wordt het wat wazig, om de gebruiker te laten weten dat er iets achter de cover zit wanneer hij erop klikt. Daarnaast staat het onder de films vermeld dat de covers klikbaar zijn. Wanneer de gebruiker klikt op de film komt er een dialoog in beeld onder de desbetreffende film, waarin meer informatie staat over de gekozen film. Op basis van deze info kan de gebruiker zijn beslissing maken.
+
+Toelichting testen, verbeteren en code
+Tijdens het werken aan deze opdracht zijn er verschillende momenten geweest waarop ik vast ben gelopen en hulp nodig had. Deze momenten zal ik hier toelichten. De code is uitgelegd in de bestanden zelf als comments.
+
+Om de carousel werkend te krijgen heb ik veel verschillende manieren gezocht om deze aan de praat te krijgen. Ik heb hier gezocht naar if else statements, maar ook naar hele eenvoudige functies met classlist.add. Uiteindelijk heb ik hulp gehad van Nino Schelcher bij het oplossen van dit probleem. Met behulp van een array kwam de informatie onder de geselecteerde film tevoorschijn.
+
+Ook heb ik veel tijd gestopt in het zoeken van een oplossing waarmee ik via het toetsenbord door het filmaanbod kon navigeren. Zelf is dit mij helaas niet gelukt, maar met hulp van Vincent Kempers heb ik deze ook redelijk aan de praat gekregen. Alhoewel de lijst nu kan worden gebruikt met de 'tab' knop, begint hij achteraan de lijst en gaat hij naar voren. Ik heb geprobeerd dit op te lossen, maar het is me niet gelukt.
+
+Na mijn eerste inlevermoment had ik de opdracht niet voldoende afgerond. Op basis van de feedback die ik hieruit heb gekregen kan het carousel nu met tab worden bediend én wordt er genoemd dat dit mogelijk is, schuiven de informatie dialogen van de films nu mee met de afbeelding en is er vermeld dat het mogelijk is om films te klikken. Daarnaast heb ik de readme flink uitgebreid om te zorgen voor een betere toelichting op de opdracht.
+
+Al met al ben ik veel tijd kwijt geweest met deze opdracht. Ik vond het lastig om Nitflex aan het werken te krijgen zoals ik had gewild, maar ik ben uiteindelijk wel tevreden met wat ik eruit heb weten te krijgen. 
 
 ---
 - [Markup cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
