@@ -14,6 +14,7 @@ Een portfolio met naar binnen slidende elementen(niet goed gelukt): [Opdracht 2:
 Nitflex, maar dan met sliders, layouts en Json: [Opdracht 3: Een interactie uitwerken met externe data](opdracht3/)
 
 Toelichting eindopdracht
+
 Voor de eindopdracht van frontend voor designers heb ik mijn best gedaan om mijn eigen Netflix op te zetten, genaamd Nitflex. Tijdens de opdracht heb ik de json file van Koop Reynders gebruikt.
 
 Wanneer de gebruiker Nitflex opent komt hij eerst terecht op een loading state. Hier staat een laadsymbool en ontvangt hij een geruststellend bericht dat Nitflex 'op zoek is naar de beste films voor de gebruiker'. Zo weet de gebruiker waarop hij aan het wachten is.
@@ -25,6 +26,7 @@ De gebruiker kan vervolgens navigeren door het aanbod aan films. Dit kan via de 
 Als de gebruiker dan uiteindelijk een film heeft gevonden die hij leuk vind kan hij hier naartoe navigeren en erop klikken. Voordat hij klikt vergroot de cover van de film, om de gebruiker te laten weten dat er iets achter de cover zit wanneer hij erop klikt. Daarnaast staat het onder de films vermeld dat de covers klikbaar zijn. Wanneer de gebruiker klikt op de film komt er een dialoog in beeld onder de desbetreffende film, waarin meer informatie staat over de gekozen film. Op basis van deze info kan de gebruiker zijn beslissing maken.
 
 Toelichting testen, verbeteren en code
+
 Tijdens het werken aan deze opdracht zijn er verschillende momenten geweest waarop ik vast ben gelopen en hulp nodig had. Deze momenten zal ik hier toelichten. De code is uitgelegd in de bestanden zelf als comments.
 
 Om de carousel werkend te krijgen heb ik veel verschillende manieren gezocht om deze aan de praat te krijgen. Ik heb hier gezocht naar if else statements, maar ook naar hele eenvoudige functies met classlist.add. Uiteindelijk heb ik hulp gehad van Nino Schelcher bij het oplossen van dit probleem. Met behulp van een array kwam de informatie onder de geselecteerde film tevoorschijn.
