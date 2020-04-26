@@ -90,19 +90,28 @@ li {
     margin-left: 20px;
 }
 
+li:focus {
+    border-top: 3px solid whitesmoke ;
+    outline: none ;
+    
+}
+
 img {
     height: 400px;
-    width: 250px;
+    width: 260px;
 }
 
 section img.show {
-    border: solid 3px #171717;
+    border: solid 3px whitesmoke;
 }
 
 img:hover {
     transform: scale(1.05);
     transition-duration: 0.5s;
-    filter: blur(1px);
+}
+
+img:active {
+    outline: none ;
 }
 
 article {
