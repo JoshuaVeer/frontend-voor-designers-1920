@@ -53,7 +53,7 @@ document.addEventListener('keydown', (event) => {
     }
 }, true);
 
-// Een variabele aanmaken en direct een functie toewijzen waarin ik een class toevoeg aan het element
+// Een variabele aanmaken en direct een functie toewijzen waarin ik een class toevoeg aan het element. Dit is het laadscherm.
 var loadFunctie = function () {
     loader.classList.add('hallo');
 }

@@ -27,6 +27,7 @@ span {
     display: block;
 }
 
+/*Hiermee verdwijnt het laadscherm weer. Ik voeg deze class toe met javascript.*/
 span.hallo {
     display: none;
 }
@@ -46,6 +47,7 @@ span p {
     height: 140px;
 }
 
+/*Dit zijn de grid en slider iconen. Dit zijn svg's die ik met deze code een kleur geef.*/
 .colorfill {
     width: 40px;
     height: auto;
@@ -53,6 +55,7 @@ span p {
     filter: invert(0%) sepia(34%) saturate(0%) hue-rotate(193deg) brightness(86%) contrast(104%);
 }
 
+/*Wanneer er op een svg wordt gedrukt wordt de kleur anders*/
 .colorfill.active {
     filter: invert(99%) sepia(3%) saturate(338%) hue-rotate(171deg) brightness(116%) contrast(100%);
 }
@@ -81,6 +84,7 @@ ul {
     overflow-x: scroll;
 }
 
+/*Met deze code verander ik de layout van een slider naar een grid door middel van flex wrap.*/
 ul.switch {
     flex-wrap: wrap;
     width: 1000px;
@@ -90,6 +94,7 @@ li {
     margin-left: 20px;
 }
 
+/*Dit is de witte balk die boven een film komt te staan wanneer hij wordt gefocust.*/
 li:focus {
     border-top: 3px solid whitesmoke ;
     outline: none ;
@@ -101,6 +106,7 @@ img {
     width: 260px;
 }
 
+/*Wanneer de film vervolgens is geselecteerd wordt deze class toegevoegd.*/
 section img.show {
     border: solid 3px whitesmoke;
 }
@@ -110,14 +116,11 @@ img:hover {
     transition-duration: 0.5s;
 }
 
-img:active {
-    outline: none ;
-}
-
 article {
     margin: 20px;
 }
 
+/*Dit is de detailpagina van een film die in eerste instantie hidden staat. Door het later toevoegen van een class wordt hij weer zichtbaar. Door de transition wordt deze animatie wat vloeiender.*/
 div {
     visibility: hidden;
     opacity: 0;
@@ -130,6 +133,7 @@ div {
     width: 230px;
 }
 
+/*Hiermee zorg ik ervoor dat de details zichtbaar worden.*/
 div.show {
     visibility: visible;
     opacity: 1;
