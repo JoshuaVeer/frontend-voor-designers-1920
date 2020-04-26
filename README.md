@@ -35,15 +35,15 @@ In het javascript bestand selecteer ik tot aan regel 23 elementen en haal ik de 
 
 Op regel 57-66 zorg ik ervoor dat het laadscherm in beeld komt en weer verdwijnt.
 
-In regel 69-110 maak ik alle elementen aan op de HTML pagina. Deze elementen vul ik vervolgens met de data uit het json bestand.
+Op regel 69-110 maak ik alle elementen aan op de HTML pagina. Deze elementen vul ik vervolgens met de data uit het json bestand.
 
 Regel 114-118 zorgen ervoor dat de details van een film onder de afbeeldingen verschijnen.
 
-Tot slot zorg ik er in regel 121-135 voor dat de layout van de films kan worden geswitcht tussen grid en slider. De comments verder in het bestand waren verschillende pogingen tot functies.
+Tot slot zorg ik er in regel 121-135 voor dat de layout van de films kan worden geswitcht tussen grid en slider. De comments verder in het bestand waren verschillende pogingen tot functies die niet zijn gelukt.
 
-Verdere toelichting staan in de code zelf in comments erbij geschreven.
+Verdere toelichting staat in de code zelf in comments erbij geschreven.
 
-Toelichting testen, verbeteren
+Toelichting testen en verbeteren
 
 Tijdens het werken aan deze opdracht zijn er verschillende momenten geweest waarop ik vast ben gelopen en hulp nodig had. Deze momenten zal ik hier toelichten.
 
